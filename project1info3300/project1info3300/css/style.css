@@ -1,0 +1,23 @@
+<style>
+
+body {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.center {
+  margin: auto;
+  width: 100%;
+  background: azure;
+  padding: 10px;
+}
+
+.center svg {
+}
+
+#evolution {margin-left:auto; margin-right:auto; display:block;}
+
+
+</style>

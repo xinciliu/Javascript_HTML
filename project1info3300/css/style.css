@@ -1,0 +1,60 @@
+<style>
+
+text{
+	font-size: 14px;
+	alignment-baseline: middle;
+	font-family: "Verdana"
+}
+
+p {
+	font-size: 16px;
+	alignment-baseline: middle;
+	font-family: "Verdana"
+}
+
+body {
+	display: block;
+	align-items: center;
+	background: white;
+	justify-content: center;
+}
+
+.title{
+	font-family: "Verdana";
+	text-align: center;
+}
+
+.title2{
+	font-size: 22px;
+	font-family: "Verdana";
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline;
+
+}
+
+
+.title3{
+	font-size: 19px;
+	font-family: "Verdana";
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.bodytext{
+	font-size: 16px;
+	font-family: "Verdana";
+	font-weight: normal;
+	margin-left: 35px; 
+	margin-right: 35px; 
+
+}
+
+.axis { font: 14px sans-serif; }
+
+#evolution {display:block; margin:auto;}
+
+
+
+</style>

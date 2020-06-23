@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> INFO 3300: Project 1 NBA Visualization </title>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script  src="js/charts.js"></script>
+  <link rel = "stylesheet" href = "css/style.css">
+</head>
+<body>
+
+  <h1 class = "title"> Visualizing NBA Data 1980-2020: Aggregate and Specific Team Analyses</h1>
+  <br>
+
+  <p class="bodytext">Here we explore  how the NBA and its professional play have evolved over the past forty years. We will be doing this by comparing four standardized markers across an aggregate time graph and then diving deeper into specific teams and their statistics. </p>
+
+  <p class="bodytext"> <b> Clarification on Markers: </b> First, we should clarify a couple items. The four standardized markers are in relation to the rebound and scoring metrics with the game. The first two, 3P% and 2P%, mark the success rate in shooting a successful 3-point shot (behind the arc) and successful 2-point shot over the number of attempts. The second two markers, DRB% (Defensive Rebound) and ORB% (Offensive Rebound), mark the successful retrieval of a missed shot or field goal on either end of the court. Defensive Rebound refers to a rebound when defending another team's shot, and offensive rebound is retrieving one's own shot.</p>
+
+  <br>
+
+  <p class="title2">Aggregate Four Marker Success Rate: 1980-2020</p>
+
+  <svg id = "evolution" width = 1000 height = 600></svg>
+
+  <p class="bodytext">The 3-point shot was introduced during the 1980 season and has steadily increased with time especially in the modern era. Because they are worth more than a 2-point shot, these shots have been increasing in number of attempts, signalling an aggregate rise in accuracy in the past forty years to around 35%. 2-point percentages have also steadily risen as well in the past few years. This is supported by a more spread-out court in the past twenty years and encouragement of shooting outside of the free throw box.</p>
+
+  <p class="bodytext">Rebounds have also increased in the past years but there has been a noted decline in offensive rebounds over defensive rebounds. This decline in offensive rebounds can't be pinpointed to a single cause, but a leading indicator is the evolution of big men taking on more roles. The "old-school" centers (usually the biggest players on the team dedicated to defense and rebounds) of 1980s and 1990s have taken on more roles outside of the box, such as 3-point shooting. Offensive rebounds have also lost importance in the game, as the past 10 champions have all finished in the bottom third of total offensive rebounds.</p>
+
+  <br>
+
+  <p class="title2">Specific Team Analysis: NBA 1980-2020</p>
+
+  <p class="bodytext">Now let's take a look at three specific teams and compare different eras. These teams were selected in comparision of the 1980s, 1990s, and 2000s era of basketball with respect to their modern counterparts to see different focus changes amongst these significant teams</p>
+
+  <div class="center">
+
+    <p class="title3">Los Angeles Lakers: 1985 to 2010</p>
+
+    <svg id = "my_dataviz" width = 380 height = 480></svg>
+
+    <svg width="400" height="720">
+
+<!-- Court Design reconfigured and adapted from https://codepen.io/third/pen/OpVLGo -->
+
+      <g id ="court">
+
+        <!-- whole court rectangle -->
+        <rect x="0" y="240" width="400" height="480" fill="bisque" stroke="#5d5c63" stroke-width="2" />
+
+        <!-- half court line and circle -->
+        <path d="M 290 720 A 60 60 0 0 0 110 720" fill="yellow" stroke="#5d5c63" stroke-width="4" />
+
+
+        <!-- 3-point arc (left) -->
+        <line x1="30" y1="239" x2="30" y2="400.5" stroke="purple" stroke-width="2" />
+        <line x1="370" y1="239" x2="370" y2="400.5" stroke="purple" stroke-width="2" />  
+        <path d="M 370.2 399 A 237.5 487.5 0 0 1 29.79 399" fill="none" stroke="purple" stroke-width="2" />
+
+        <!-- shaded area (left) -->
+        <rect x="120" y ="242" width="160" height="190" fill="purple" stroke="#fff" stroke-width="1" />
+
+        <!-- board and rim (left) -->
+        <line x1="170" y1="250" x2="230" y2="250" stroke="orange" stroke-width="2" />
+        <circle cx="200" cy="265" r="15" fill="none" stroke="orange" stroke-width="2" />    
+
+        <!-- restricted area (left) -->
+        <path d="M 240 255 A 40 40 0 0 1 160 255" fill="none" stroke="white" stroke-width="2" />
+
+        <!-- free throw circle (left) -->
+        <path d="M 260 440 A 60 60 0 0 0 140 440" fill="none" stroke="white" stroke-width="2" stroke-dasharray="10,10" />
+        <path d="M 260 440 A 60 60 0 0 1 140 440" fill="none" stroke="white" stroke-width="2" />
+
+        <!-- Image separation -->
+
+        <svg height="33%" width="100%">
+         <rect x="0" y="0" width="100%" height="100%" fill="yellow" stroke="#5d5c63" stroke-width="4" />
+         <text fill="purple" x="25%" y="92%" alignment-baseline="middle" text-anchor="middle" font-size="16" font-family="Verdana" font-weight="bold" >1985 Lakers</text>
+
+         <image xlink:href="images/lakers1985.jpg" x="1.2%" y="3%" width="190" height="190"/>
+
+         <rect x="200" y="0" width="50%" height="100%" fill="yellow" stroke="#5d5c63" stroke-width="4" />
+         <text fill="purple" x="75%" y="92%" alignment-baseline="middle" text-anchor="middle" font-size="16" font-family="Verdana" font-weight="bold" >2010 Lakers</text>
+
+         <image xlink:href="images/lakers2010.jpg" x="51.2%" y="3%" width="190" height="190"/>
+
+
+       </svg>
+     </svg>
+   </g>
+
+   <svg id = "my_dataviz2" width = 400 height = 480 ></svg>
+
+ </svg>
+
+
+</div>
+
+<p class="bodytext">The 1985 Lakers were characterized by very low 3P% rates and a high share of ORB% compared to total rebounds. This makes sense considering the era, where  playing in the post (close to the rim) was favored by many teams in the 1980s. This is in stark contrast to 2010, where a high DRB%/3P% is more in focus.</p>
+
+<br>
+
+
+<p class="title3">San Antonio Spurs: 2003 to 2014</p>
+
+<br>
+
+<g id ="court">
+
+  <svg id = "my_dataviz3" width = 380 height = 480></svg>
+
+  <svg width="400" height="720">
+
+    <!-- whole court rectangle -->
+    <rect x="0" y="240" width="400" height="480" fill="bisque" stroke="silver" stroke-width="2" />
+
+    <!-- half court line and circle -->
+    <path d="M 290 720 A 60 60 0 0 0 110 720" fill="black" stroke="silver" stroke-width="4" />
+
+
+    <!-- 3-point arc (left) -->
+    <line x1="30" y1="239" x2="30" y2="400.5" stroke="silver" stroke-width="2" />
+    <line x1="370" y1="239" x2="370" y2="400.5" stroke="silver" stroke-width="2" />  
+    <path d="M 370.2 399 A 237.5 487.5 0 0 1 29.79 399" fill="none" stroke="silver" stroke-width="2" />
+
+    <!-- shaded area (left) -->
+    <rect x="120" y ="242" width="160" height="190" fill="black" stroke="silver" stroke-width="1" />
+
+    <!-- board and rim (left) -->
+    <line x1="170" y1="250" x2="230" y2="250" stroke="orange" stroke-width="2" />
+    <circle cx="200" cy="265" r="15" fill="none" stroke="orange" stroke-width="2" />    
+
+    <!-- restricted area (left) -->
+    <path d="M 240 255 A 40 40 0 0 1 160 255" fill="none" stroke="white" stroke-width="2" />
+
+    <!-- free throw circle (left) -->
+    <path d="M 260 440 A 60 60 0 0 0 140 440" fill="none" stroke="white" stroke-width="2" stroke-dasharray="10,10" />
+    <path d="M 260 440 A 60 60 0 0 1 140 440" fill="none" stroke="white" stroke-width="2" />
+
+    <!-- Image separation -->
+
+    <svg height="33%" width="100%">
+     <rect x="0" y="0" width="100%" height="100%" fill="silver" stroke="#5d5c63" stroke-width="4" />
+     <text fill="black" x="25%" y="92%" alignment-baseline="middle" text-anchor="middle" font-size="16" font-family="Verdana" font-weight="bold" >2003 Spurs</text>
+
+     <image xlink:href="images/spurs2003.jpg" x="1.2%" y="3%" width="190" height="190"/>
+
+     <rect x="200" y="0" width="50%" height="100%" fill="silver" stroke="#5d5c63" stroke-width="4" />
+     <text fill="black" x="75%" y="92%" alignment-baseline="middle" text-anchor="middle" font-size="16" font-family="Verdana" font-weight="bold" >2014 Spurs</text>
+
+     <image xlink:href="images/spurs2014.jpg" x="51.2%" y="3%" width="190" height="190"/>
+
+
+   </svg>
+ </svg>
+
+ <svg id = "my_dataviz4" width = 410 height = 480 ></svg>
+
+
+</g>
+
+<p class="bodytext">The San Antonio Spurs were largely coached under the same style from 2000 to 2015, with key players like Manu Ginobli still on the roster. However, some things were shifted to keep up with the era, such as 3P% and DRB%. The 2015 Spurs were one of the teams with the lowest ORB% share, highlighting this trend change.</p>
+
+<br>
+
+
+<p class="title3">Golden State Warriors: 1994 to 2015</p>
+
+<br>
+
+
+<g id ="court">
+
+  <svg id = "my_dataviz5" width = 380 height = 480></svg>
+
+  <svg width="400" height="720">
+
+    <!-- whole court rectangle -->
+    <rect x="0" y="240" width="400" height="480" fill="bisque" stroke="black" stroke-width="2" />
+
+    <!-- half court line and circle -->
+    <path d="M 290 720 A 60 60 0 0 0 110 720" fill="blue" stroke="yellow" stroke-width="4" />
+
+
+    <!-- 3-point arc (left) -->
+    <line x1="30" y1="241" x2="30" y2="400.5" stroke="yellow" stroke-width="2" />
+    <line x1="370" y1="241" x2="370" y2="400.5" stroke="yellow" stroke-width="2" />  
+    <path d="M 370.2 399 A 237.5 487.5 0 0 1 29.79 399" fill="none" stroke="yellow" stroke-width="2" />
+
+    <!-- shaded area (left) -->
+    <rect x="120" y ="242" width="160" height="190" fill="blue" stroke="yellow" stroke-width="1" />
+
+    <!-- board and rim (left) -->
+    <line x1="170" y1="250" x2="230" y2="250" stroke="orange" stroke-width="2" />
+    <circle cx="200" cy="265" r="15" fill="none" stroke="orange" stroke-width="2" />    
+
+    <!-- restricted area (left) -->
+    <path d="M 240 255 A 40 40 0 0 1 160 255" fill="none" stroke="yellow" stroke-width="2" />
+
+    <!-- free throw circle (left) -->
+    <path d="M 260 440 A 60 60 0 0 0 140 440" fill="none" stroke="white" stroke-width="2" stroke-dasharray="10,10" />
+    <path d="M 260 440 A 60 60 0 0 1 140 440" fill="none" stroke="white" stroke-width="2" />
+
+    <!-- Image separation -->
+
+    <svg height="33%" width="100%">
+     <rect x="0" y="0" width="100%" height="100%" fill="yellow" stroke="#5d5c63" stroke-width="4" />
+     <text fill="blue" x="25%" y="92%" alignment-baseline="middle" text-anchor="middle" font-size="16" font-family="Verdana" font-weight="bold" >1994 Warriors</text>
+
+     <image xlink:href="images/warriors1994.jpg" x="1.2%" y="3%" width="190" height="190"/>
+
+     <rect x="200" y="0" width="50%" height="100%" fill="yellow" stroke="#5d5c63" stroke-width="4" />
+     <text fill="blue" x="75%" y="92%" alignment-baseline="middle" text-anchor="middle" font-size="16" font-family="Verdana" font-weight="bold" >2015 Warriors</text>
+
+     <image xlink:href="images/warriors2015.jpg" x="51.2%" y="3%" width="190" height="190"/>
+
+
+   </svg>
+ </svg>
+
+
+ <svg id = "my_dataviz6" width = 400 height = 480></svg>
+
+ <p class="bodytext">Besides the 1994 season, the Warriors in the 1990s were largely mediocre compared to their modern day juggernauts. In comparision, the 2015 Warriors focused heavily on outside shooting and 3-point shooting. Steph Curry and an ensemble of teammates were known for their focused strategy to hit 3-point shots during the 2015-17 seasons</p>
+
+
+
+</body>
